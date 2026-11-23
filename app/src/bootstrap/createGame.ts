@@ -6,6 +6,7 @@ import {
 import type { GameServices } from "../application/ports/gameServices";
 import type { CategoryId, Question } from "../domain/entities/question";
 import { subscribeVisibility } from "../infrastructure/browser/pageVisibility";
+import { createGameAudio } from "../infrastructure/browser/gameAudio";
 import { createScreenOrientation } from "../infrastructure/browser/screenOrientation";
 
 function shuffle(questions: Question[]) {
@@ -45,6 +46,7 @@ async function loadQuestions(category: CategoryId) {
 export function createGame(): GameServices {
   let matchId = 0;
   return {
+    audio: createGameAudio(),
     ...createScreenOrientation(),
     async prepare(arena, category) {
       return prepareMatch(

@@ -56,12 +56,34 @@ export function GameApp({
       dispatch({ type: "pause" });
   }, [rotationRequired, match?.phase, dispatch]);
   useEffect(() => () => services.releaseOrientation(), [services]);
+  useEffect(() => () => services.audio.stopAll(), [services]);
+  const phase = match?.phase;
+  const matchId = match?.id;
+  const winner = match?.winner ?? null;
+  const winnerColorName =
+    winner !== null
+      ? colors.find((color) => color.id === match?.players[winner].color)?.name
+      : undefined;
+  useEffect(() => {
+    const { audio } = services;
+    if (phase === "playing") audio.startGameplay();
+    else if (phase === "paused" || phase === "countdown")
+      audio.pauseGameplay();
+    else if (phase === "finished") {
+      audio.stopGameplay();
+      if (winner !== null)
+        audio.celebrateWinner(
+          `Pemain ${winner + 1}, tim ${winnerColorName ?? ""}, menang!`,
+        );
+    } else audio.stopAll();
+  }, [services, phase, matchId, winner, winnerColorName]);
   useEffect(() => {
     if (match?.phase !== "finished") return;
     const timer = window.setTimeout(() => setResultMatchId(match.id), 500);
     return () => window.clearTimeout(timer);
   }, [match?.phase, match?.id]);
   const home = () => {
+    services.audio.stopAll();
     services.releaseOrientation();
     clear();
     setSelectedArena(null);
