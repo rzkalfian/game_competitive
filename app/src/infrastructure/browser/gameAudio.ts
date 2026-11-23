@@ -1,4 +1,5 @@
 import type { GameAudio } from "../../application/ports/gameAudio";
+import { createSynthSounds } from "./synthSounds";
 
 const speechTimeoutMs = 6000;
 
@@ -47,7 +48,12 @@ export function createGameAudio(): GameAudio {
     fireworks.pause();
     fireworks.currentTime = 0;
   };
+  const synth = createSynthSounds();
   return {
+    startMenuMusic: synth.startMenuMusic,
+    stopMenuMusic: synth.stopMenuMusic,
+    playCountdownTick: synth.playCountdownTick,
+    playStart: synth.playStart,
     startGameplay() {
       play(gameplay);
     },
@@ -65,7 +71,9 @@ export function createGameAudio(): GameAudio {
         if (active === celebration) play(fireworks);
       });
     },
+    stopCelebration,
     stopAll() {
+      synth.stopMenuMusic();
       this.stopGameplay();
       stopCelebration();
     },

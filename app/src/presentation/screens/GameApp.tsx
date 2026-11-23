@@ -66,16 +66,23 @@ export function GameApp({
       : undefined;
   useEffect(() => {
     const { audio } = services;
+    if (phase === undefined || phase === "ready") {
+      audio.stopGameplay();
+      audio.stopCelebration();
+      audio.startMenuMusic();
+      return;
+    }
+    audio.stopMenuMusic();
     if (phase === "playing") audio.startGameplay();
     else if (phase === "paused" || phase === "countdown")
       audio.pauseGameplay();
-    else if (phase === "finished") {
+    else {
       audio.stopGameplay();
       if (winner !== null)
         audio.celebrateWinner(
           `Pemain ${winner + 1}, tim ${winnerColorName ?? ""}, menang!`,
         );
-    } else audio.stopAll();
+    }
   }, [services, phase, matchId, winner, winnerColorName]);
   useEffect(() => {
     if (match?.phase !== "finished") return;
@@ -83,7 +90,6 @@ export function GameApp({
     return () => window.clearTimeout(timer);
   }, [match?.phase, match?.id]);
   const home = () => {
-    services.audio.stopAll();
     services.releaseOrientation();
     clear();
     setSelectedArena(null);
@@ -96,7 +102,10 @@ export function GameApp({
     (item) => item.id === (match?.arena ?? selectedArena),
   );
   const category = categories.find((item) => item.id === match?.category);
-  const startPlaying = () => dispatch({ type: "start" });
+  const startPlaying = () => {
+    services.audio.playStart();
+    dispatch({ type: "start" });
+  };
 
   return (
     <div className={`app ${match ? "in-match" : ""}`}>
@@ -247,7 +256,10 @@ export function GameApp({
           />
           <PlayerPanel match={match} playerId={1} dispatch={dispatch} />
           {match.phase === "countdown" && !rotationRequired && (
-            <Countdown onComplete={startPlaying} />
+            <Countdown
+              onComplete={startPlaying}
+              onTick={services.audio.playCountdownTick}
+            />
           )}
           {match.phase === "playing" && (
             <div className="start-flash" role="status">
