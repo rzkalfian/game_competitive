@@ -1,0 +1,104 @@
+{
+  "questions": [
+    {
+      "prompt": "3 + 4 = ?",
+      "answer": "7",
+      "explanation": "Tiga ditambah empat menjadi tujuh."
+    },
+    {
+      "prompt": "8 - 3 = ?",
+      "answer": "5",
+      "explanation": "Delapan dikurangi tiga menjadi lima."
+    },
+    {
+      "prompt": "2 + 6 = ?",
+      "answer": "8",
+      "explanation": "Dua ditambah enam menjadi delapan."
+    },
+    {
+      "prompt": "10 - 4 = ?",
+      "answer": "6",
+      "explanation": "Sepuluh dikurangi empat menjadi enam."
+    },
+    {
+      "prompt": "5 + 5 = ?",
+      "answer": "10",
+      "explanation": "Lima ditambah lima menjadi sepuluh."
+    },
+    {
+      "prompt": "9 - 2 = ?",
+      "answer": "7",
+      "explanation": "Sembilan dikurangi dua menjadi tujuh."
+    },
+    {
+      "prompt": "4 + 8 = ?",
+      "answer": "12",
+      "explanation": "Empat ditambah delapan menjadi dua belas."
+    },
+    {
+      "prompt": "12 - 5 = ?",
+      "answer": "7",
+      "explanation": "Dua belas dikurangi lima menjadi tujuh."
+    },
+    {
+      "prompt": "3 x 2 = ?",
+      "answer": "6",
+      "explanation": "Tiga kelompok berisi dua berjumlah enam."
+    },
+    {
+      "prompt": "4 x 3 = ?",
+      "answer": "12",
+      "explanation": "Empat kelompok berisi tiga berjumlah dua belas."
+    },
+    {
+      "prompt": "6 + 7 = ?",
+      "answer": "13",
+      "explanation": "Enam ditambah tujuh menjadi tiga belas."
+    },
+    {
+      "prompt": "15 - 8 = ?",
+      "answer": "7",
+      "explanation": "Lima belas dikurangi delapan menjadi tujuh."
+    },
+    {
+      "prompt": "5 x 2 = ?",
+      "answer": "10",
+      "explanation": "Lima kelompok berisi dua berjumlah sepuluh."
+    },
+    {
+      "prompt": "8 + 9 = ?",
+      "answer": "17",
+      "explanation": "Delapan ditambah sembilan menjadi tujuh belas."
+    },
+    {
+      "prompt": "18 - 6 = ?",
+      "answer": "12",
+      "explanation": "Delapan belas dikurangi enam menjadi dua belas."
+    },
+    {
+      "prompt": "12 : 3 = ?",
+      "answer": "4",
+      "explanation": "Dua belas dibagi tiga sama dengan empat."
+    },
+    {
+      "prompt": "16 : 4 = ?",
+      "answer": "4",
+      "explanation": "Enam belas dibagi empat sama dengan empat."
+    },
+    {
+      "prompt": "3 x 5 = ?",
+      "answer": "15",
+      "explanation": "Tiga kelompok berisi lima berjumlah lima belas."
+    },
+    {
+      "prompt": "20 - 9 = ?",
+      "answer": "11",
+      "explanation": "Dua puluh dikurangi sembilan menjadi sebelas."
+    },
+    {
+      "prompt": "18 : 2 = ?",
+      "answer": "9",
+      "explanation": "Delapan belas dibagi dua sama dengan sembilan."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+@import "@fontsource/permanent-marker/latin-400.css";
+@import "@fontsource/nunito/latin-400.css";
+@import "@fontsource/nunito/latin-700.css";
+@import "@fontsource/nunito/latin-800.css";
+@import "@fontsource/nunito/latin-900.css";
+
+:root {
+  font-family: "Nunito", sans-serif;
+  color: #24463d;
+  background: #f7fbf5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9b412f;
+  outline-offset: 3px;
+}
+button:not(:disabled):active {
+  filter: brightness(0.94);
+}
+button svg {
+  flex-shrink: 0;
+}
+h1,
+h2,
+p {
+  overflow-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}

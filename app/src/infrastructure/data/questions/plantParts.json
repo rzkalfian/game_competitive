@@ -1,0 +1,105 @@
+{
+  "options": ["Akar", "Batang", "Daun", "Bunga", "Buah", "Biji"],
+  "questions": [
+    {
+      "prompt": "Bagian apa yang menyerap air dari tanah?",
+      "answer": "Akar",
+      "explanation": "Akar menyerap air dan mineral dari tanah."
+    },
+    {
+      "prompt": "Bagian apa yang menopang tumbuhan agar tegak?",
+      "answer": "Batang",
+      "explanation": "Batang menopang bagian tumbuhan di atas tanah."
+    },
+    {
+      "prompt": "Bagian utama tempat membuat makanan dengan cahaya matahari?",
+      "answer": "Daun",
+      "explanation": "Daun menjadi tempat utama fotosintesis."
+    },
+    {
+      "prompt": "Bagian apa yang menjadi tempat penyerbukan?",
+      "answer": "Bunga",
+      "explanation": "Penyerbukan terjadi pada bunga."
+    },
+    {
+      "prompt": "Bagian apa yang melindungi biji mangga?",
+      "answer": "Buah",
+      "explanation": "Buah mangga membungkus dan melindungi bijinya."
+    },
+    {
+      "prompt": "Bagian apa yang dapat berkecambah menjadi tumbuhan baru?",
+      "answer": "Biji",
+      "explanation": "Biji dapat berkecambah pada kondisi yang sesuai."
+    },
+    {
+      "prompt": "Bagian apa yang menambatkan tumbuhan di tanah?",
+      "answer": "Akar",
+      "explanation": "Akar membantu tumbuhan tetap tertambat di tanah."
+    },
+    {
+      "prompt": "Bagian apa yang menghubungkan akar dengan daun?",
+      "answer": "Batang",
+      "explanation": "Batang menghubungkan akar dan daun."
+    },
+    {
+      "prompt": "Bagian lebar dan pipih yang biasanya berwarna hijau?",
+      "answer": "Daun",
+      "explanation": "Daun biasanya pipih dan hijau karena klorofil."
+    },
+    {
+      "prompt": "Mahkota dan kelopak adalah bagian dari apa?",
+      "answer": "Bunga",
+      "explanation": "Bunga memiliki kelopak dan mahkota."
+    },
+    {
+      "prompt": "Bagian yang berdaging pada pepaya disebut apa?",
+      "answer": "Buah",
+      "explanation": "Daging pepaya merupakan bagian buah."
+    },
+    {
+      "prompt": "Butiran di dalam buah semangka disebut apa?",
+      "answer": "Biji",
+      "explanation": "Butiran di dalam semangka adalah biji."
+    },
+    {
+      "prompt": "Bagian bawah tanah yang bercabang untuk menyerap mineral?",
+      "answer": "Akar",
+      "explanation": "Akar bercabang untuk menyerap air dan mineral."
+    },
+    {
+      "prompt": "Bagian berkayu pada pohon tempat cabang tumbuh?",
+      "answer": "Batang",
+      "explanation": "Cabang tumbuh dari batang pohon."
+    },
+    {
+      "prompt": "Bagian yang memiliki stomata untuk pertukaran gas?",
+      "answer": "Daun",
+      "explanation": "Daun memiliki stomata untuk pertukaran gas."
+    },
+    {
+      "prompt": "Benang sari dan putik terdapat pada bagian apa?",
+      "answer": "Bunga",
+      "explanation": "Benang sari dan putik adalah bagian bunga."
+    },
+    {
+      "prompt": "Bagian yang berkembang dari bakal buah setelah pembuahan?",
+      "answer": "Buah",
+      "explanation": "Bakal buah berkembang menjadi buah."
+    },
+    {
+      "prompt": "Bagian yang mengandung calon tumbuhan atau embrio?",
+      "answer": "Biji",
+      "explanation": "Biji mengandung embrio tumbuhan."
+    },
+    {
+      "prompt": "Bagian yang mengalirkan air dari akar ke daun?",
+      "answer": "Batang",
+      "explanation": "Jaringan pada batang mengangkut air menuju daun."
+    },
+    {
+      "prompt": "Bagian apa yang menghasilkan serbuk sari?",
+      "answer": "Bunga",
+      "explanation": "Benang sari pada bunga menghasilkan serbuk sari."
+    }
+  ]
+}

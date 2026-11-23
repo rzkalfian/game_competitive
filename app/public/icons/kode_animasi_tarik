@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="tug-of-war-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" width="100%" height="100%">
+                            <defs>
+                                <!-- Gaya CSS Internal di dalam SVG untuk Animasi & Variabel Warna Baju -->
+                                <style id="svg-internal-style">
+                                    #tug-of-war-svg {
+                                        --shirt-main: #D92B2B;
+                                        --shirt-shade: #B01E1E;
+                                        --shirt-highlight: #E84545;
+                                        --shorts-main: #F8FAFC;
+                                        --shorts-shade: #CBD5E1;
+                                        --outline: #2C1A12;
+                                        --skin-main: #DE9366;
+                                        --skin-shade: #C2774B;
+                                        --hair-main: #2E221D;
+                                        --hair-highlight: #47362E;
+                                        --rope-main: #B88655;
+                                        --rope-shade: #8A5E34;
+                                        --rope-highlight: #D9A978;
+                                        --anim-duration: 1.3s;
+                                        --anim-state: running;
+                                    }
+
+                                    /* Animasi Tarikan Tubuh Atas &amp; Lengan */
+                                    @keyframes tugPullBody {
+                                        0%, 100% {
+                                            transform: rotate(0deg) translate(0px, 0px);
+                                        }
+                                        45% {
+                                            transform: rotate(-4.5deg) translate(-6px, 2px);
+                                        }
+                                        60% {
+                                            transform: rotate(-5.2deg) translate(-7px, 2.5px);
+                                        }
+                                        85% {
+                                            transform: rotate(1deg) translate(1.5px, -0.5px);
+                                        }
+                                    }
+
+                                    /* Animasi Kepala Menahan Beban */
+                                    @keyframes headStrain {
+                                        0%, 100% {
+                                            transform: rotate(0deg) translate(0px, 0px);
+                                        }
+                                        50% {
+                                            transform: rotate(-3.5deg) translate(-3px, 1px);
+                                        }
+                                    }
+
+                                    /* Animasi Tali Tambang Tegang &amp; Bergetar Halus */
+                                    @keyframes ropeTensePull {
+                                        0%, 100% {
+                                            transform: translateX(0px) translateY(0px);
+                                        }
+                                        25% {
+                                            transform: translateX(-3px) translateY(-0.6px);
+                                        }
+                                        50% {
+                                            transform: translateX(-7px) translateY(1.2px);
+                                        }
+                                        75% {
+                                            transform: translateX(-4px) translateY(-0.5px);
+                                        }
+                                    }
+
+                                    /* Animasi Ayunan Lembut Tali Menjuntai di Depan Paha */
+                                    @keyframes ropeTailSwing {
+                                        0%, 100% {
+                                            transform: rotate(0deg) translate(0px, 0px);
+                                        }
+                                        45% {
+                                            transform: rotate(-4deg) translate(-5px, 2px);
+                                        }
+                                        60% {
+                                            transform: rotate(-5.2deg) translate(-6px, 2.5px);
+                                        }
+                                        85% {
+                                            transform: rotate(2.5deg) translate(2px, -1px);
+                                        }
+                                    }
+
+                                    /* Animasi Ikat Kepala Merah Putih Berkibar */
+                                    @keyframes ribbonFlutterTop {
+                                        0%, 100% {
+                                            transform: rotate(0deg) skewY(0deg);
+                                        }
+                                        35% {
+                                            transform: rotate(6deg) skewY(-3deg);
+                                        }
+                                        70% {
+                                            transform: rotate(-4deg) skewY(2deg);
+                                        }
+                                    }
+
+                                    @keyframes ribbonFlutterBottom {
+                                        0%, 100% {
+                                            transform: rotate(0deg) skewY(0deg);
+                                        }
+                                        40% {
+                                            transform: rotate(-7deg) skewY(3deg);
+                                        }
+                                        75% {
+                                            transform: rotate(5deg) skewY(-2deg);
+                                        }
+                                    }
+
+                                    /* Animasi Garis Debu / Gesekan Kaki */
+                                    @keyframes dustPulse {
+                                        0%, 100% {
+                                            opacity: 0.35;
+                                            transform: translateX(0px) scale(0.95);
+                                        }
+                                        50% {
+                                            opacity: 0.95;
+                                            transform: translateX(-4px) scale(1.06);
+                                        }
+                                    }
+
+                                    /* Animasi Bayangan Tanah */
+                                    @keyframes shadowStretch {
+                                        0%, 100% {
+                                            transform: scaleX(1);
+                                        }
+                                        50% {
+                                            transform: scaleX(1.04) translateX(-3px);
+                                        }
+                                    }
+
+                                    .anim-upper-body {
+                                        transform-origin: 215px 265px;
+                                        animation: tugPullBody var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-head {
+                                        transform-origin: 205px 175px;
+                                        animation: headStrain var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-rope-tense {
+                                        animation: ropeTensePull var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-rope-front-tail {
+                                        transform-origin: 218px 232px;
+                                        animation: ropeTailSwing var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-ribbon-1 {
+                                        transform-origin: 122px 116px;
+                                        animation: ribbonFlutterTop 0.95s ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-ribbon-2 {
+                                        transform-origin: 124px 122px;
+                                        animation: ribbonFlutterBottom 1.1s ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-dust {
+                                        transform-origin: 210px 395px;
+                                        animation: dustPulse var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    .anim-shadow {
+                                        transform-origin: 255px 412px;
+                                        animation: shadowStretch var(--anim-duration) ease-in-out infinite;
+                                        animation-play-state: var(--anim-state);
+                                    }
+
+                                    /* Kelas Warna Baju &amp; Celana */
+                                    .shirt-fill { fill: var(--shirt-main); transition: fill 0.2s ease; }
+                                    .shirt-shade-fill { fill: var(--shirt-shade); transition: fill 0.2s ease; }
+                                    .shirt-highlight-fill { fill: var(--shirt-highlight); transition: fill 0.2s ease; }
+                                    .shorts-fill { fill: var(--shorts-main); transition: fill 0.2s ease; }
+                                    .shorts-shade-fill { fill: var(--shorts-shade); transition: fill 0.2s ease; }
+                                </style>
+
+                                <!-- ClipPath untuk Motif Baju (Garis-garis & Nomor) agar pas dengan bentuk tubuh baju -->
+                                <clipPath id="torso-shirt-clip">
+                                    <path d="M 152 174 C 166 168, 198 168, 218 175 C 234 182, 246 196, 250 212 L 245 256 C 222 268, 178 272, 146 262 L 142 214 C 143 196, 146 182, 152 174 Z"/>
+                                </clipPath>
+                            </defs>
+
+                            <!-- 1. BAYANGAN LANTAI & GARIS DEBU GERAKAN -->
+                            <g id="layer-ground">
+                                <ellipse class="anim-shadow" cx="255" cy="412" rx="145" ry="16" fill="#E2E8F0"/>
+                                <!-- Garis debu gesekan kaki kiri (belakang) -->
+                                <g class="anim-dust" stroke="#3B251B" stroke-width="2.2" stroke-linecap="round" fill="none">
+                                    <path d="M 110 384 Q 124 382, 134 391"/>
+                                    <path d="M 116 394 Q 126 394, 132 399"/>
+                                    <path d="M 135 378 Q 142 382, 144 388"/>
+                                    <!-- Garis debu kaki kanan (depan) -->
+                                    <path d="M 274 382 Q 286 382, 294 389"/>
+                                    <path d="M 278 391 Q 288 392, 296 397"/>
+                                </g>
+                            </g>
+
+                            <!-- 2. KAKI & CELANA PENDEK (Berada di belakang segmen tali menjuntai) -->
+                            <g id="layer-legs-shorts">
+                                <!-- Kaki Kiri (Belakang - menapak kuat) -->
+                                <g id="leg-left">
+                                    <path d="M 164 294 L 188 338 C 192 346, 190 354, 183 361 L 164 382 C 161 386, 163 391, 169 395 L 194 410 C 202 414, 200 423, 190 424 L 165 426 C 156 426, 150 421, 145 414 L 135 400 C 131 394, 132 387, 137 381 L 162 350 L 146 304 Z" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bayangan paha & betis kiri -->
+                                    <path d="M 148 304 L 164 349 L 141 378 C 138 382, 137 386, 139 390 L 146 384 L 172 350 L 156 302 Z" fill="var(--skin-shade)" opacity="0.55"/>
+                                    <!-- Garis jari-jari kaki kiri -->
+                                    <path d="M 189 415 L 185 423 M 181 416 L 178 424 M 173 417 L 171 424 M 165 417 L 164 424" stroke="#2C1A12" stroke-width="2" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- Kaki Kanan (Depan - menahan dorongan) -->
+                                <g id="leg-right">
+                                    <path d="M 228 282 L 266 334 L 298 378 C 302 382, 308 385, 316 387 L 344 394 C 352 396, 353 405, 344 409 L 328 414 C 321 416, 313 415, 305 412 L 284 404 C 278 402, 275 397, 275 390 L 274 381 L 242 342 L 208 296 Z" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bayangan kaki kanan -->
+                                    <path d="M 212 296 L 244 340 L 275 379 L 281 375 L 250 335 L 222 292 Z" fill="var(--skin-shade)" opacity="0.5"/>
+                                    <!-- Garis jari-jari kaki kanan -->
+                                    <path d="M 341 399 L 335 408 M 334 401 L 328 410 M 326 402 L 321 411" stroke="#2C1A12" stroke-width="2" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- Celana Pendek (Dapat diganti warnanya) -->
+                                <g id="shorts-group">
+                                    <!-- Bagian kaki celana kanan (depan) -->
+                                    <path id="shorts-right-leg" class="shorts-fill" d="M 192 256 L 246 250 L 266 288 C 248 298, 224 303, 206 301 L 194 276 Z" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bagian kaki celana kiri (belakang) -->
+                                    <path id="shorts-left-leg" class="shorts-fill" d="M 146 258 L 198 256 L 204 298 C 184 307, 162 313, 148 312 L 138 282 C 139 272, 142 264, 146 258 Z" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bayangan lipatan celana -->
+                                    <path class="shorts-shade-fill" d="M 148 261 L 195 259 L 197 268 C 175 271, 156 270, 144 267 Z"/>
+                                    <path class="shorts-shade-fill" d="M 196 276 L 204 298 C 196 301, 189 303, 183 305 L 188 278 Z"/>
+                                    <path class="shorts-shade-fill" d="M 244 253 L 263 287 C 256 291, 249 294, 242 296 L 234 255 Z" opacity="0.65"/>
+                                    <!-- Garis jahitan tengah celana -->
+                                    <path d="M 196 260 L 202 296" stroke="#2C1A12" stroke-width="2.5" stroke-linecap="round"/>
+                                </g>
+                            </g>
+
+                            <!-- 3. TUBUH ATAS (BAJU, LENGAN, TALI TEGANG, TALI MENJUNTAI DEPAN PAHA, KEPALA) -->
+                            <g id="layer-upper-body" class="anim-upper-body">
+
+                                <!-- Lengan Kanan (Belakang, memegang tali lebih jauh di depan) -->
+                                <g id="arm-right-back">
+                                    <!-- Lengan baju kanan -->
+                                    <path id="shirt-sleeve-right" class="shirt-fill" d="M 222 178 C 242 182, 256 196, 262 212 L 238 224 L 222 202 Z" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <path class="shirt-shade-fill" d="M 238 222 L 260 211 L 256 204 L 235 215 Z"/>
+                                    <!-- Tangan & lengan bawah kanan -->
+                                    <path d="M 240 218 L 284 224 L 286 238 L 236 234 Z" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                </g>
+
+                                <!-- BADAN BAJU UTAMA (Modular & Customizable) -->
+                                <g id="shirt-group">
+                                    <!-- Base Kaos -->
+                                    <path id="shirt-base" class="shirt-fill" d="M 152 174 C 166 168, 198 168, 218 175 C 234 182, 246 196, 250 212 L 245 256 C 222 268, 178 272, 146 262 L 142 214 C 143 196, 146 182, 152 174 Z" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+
+                                    <!-- Layer Motif Tambahan (Dipotong sesuai bentuk kaos) -->
+                                    <g clip-path="url(#torso-shirt-clip)">
+                                        <!-- Motif 1: Garis-Garis Merah Putih / Kontras (Tersembunyi secara default) -->
+                                        <g id="shirt-pattern-stripes" style="display: none;">
+                                            <rect x="130" y="186" width="130" height="12" fill="#FFFFFF" opacity="0.92"/>
+                                            <rect x="130" y="210" width="130" height="12" fill="#FFFFFF" opacity="0.92"/>
+                                            <rect x="130" y="234" width="130" height="12" fill="#FFFFFF" opacity="0.92"/>
+                                        </g>
+
+                                        <!-- Motif 2: Jersey Nomor 17 & Garis Dada (Tersembunyi secara default) -->
+                                        <g id="shirt-pattern-jersey" style="display: none;">
+                                            <rect x="130" y="206" width="130" height="16" fill="#FFFFFF" opacity="0.9"/>
+                                            <text x="206" y="246" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="26" fill="#FFFFFF" stroke="#2C1A12" stroke-width="1.2" text-anchor="middle">17</text>
+                                        </g>
+
+                                        <!-- Bayangan & Lipatan Kaos (Otomatis menyesuaikan warna baju) -->
+                                        <path id="shirt-shade" class="shirt-shade-fill" d="M 145 190 C 152 212, 156 238, 162 263 L 146 262 L 142 214 Z" opacity="0.85"/>
+                                        <path class="shirt-shade-fill" d="M 185 236 C 204 234, 224 238, 245 246 L 245 256 C 220 267, 184 270, 154 263 C 166 254, 176 244, 185 236 Z" opacity="0.7"/>
+                                        <!-- Highlight bahu/dada -->
+                                        <path class="shirt-highlight-fill" d="M 205 178 C 222 182, 234 192, 240 205 C 230 198, 218 190, 205 178 Z" opacity="0.5"/>
+                                    </g>
+
+                                    <!-- Garis Kerutan Kain Baju -->
+                                    <path d="M 176 236 Q 192 232, 206 235" fill="none" stroke="#2C1A12" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                                    <path d="M 218 242 Q 232 243, 242 248" fill="none" stroke="#2C1A12" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+                                    <!-- Kerah Kaos: Model Crew-Neck (Default) -->
+                                    <g id="shirt-collar-crew">
+                                        <path d="M 172 172 C 182 188, 204 188, 212 174" fill="none" stroke="#2C1A12" stroke-width="3" stroke-linecap="round"/>
+                                        <path class="shirt-shade-fill" d="M 174 172 C 183 185, 202 185, 210 174 C 202 180, 183 180, 174 172 Z"/>
+                                    </g>
+
+                                    <!-- Kerah Kaos: Model V-Neck (Alternatif) -->
+                                    <g id="shirt-collar-vneck" style="display: none;">
+                                        <path d="M 170 171 L 193 196 L 214 173" fill="none" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                                        <path class="shirt-shade-fill" d="M 172 171 L 193 193 L 212 173 L 193 186 Z"/>
+                                    </g>
+                                </g>
+
+                                <!-- SEGMEN TALI 2: TALI MENJUNTAI DI DEPAN BAJU BAWAH & DI DEPAN PAHA KAKI BELAKANG -->
+                                <!-- Ditempatkan di atas layer-legs-shorts & shirt-group agar melintas realistis di depan paha kiri -->
+                                <g id="layer-rope-front-tail" class="anim-rope-front-tail">
+                                    <!-- Bayangan halus tali pada kain baju & celana/paha -->
+                                    <path d="M 218 234 C 194 244, 168 266, 152 298 C 136 330, 114 374, 68 386 C 52 390, 38 389, 28 386" fill="none" stroke="#2C1A12" stroke-width="14" stroke-linecap="round" opacity="0.16" transform="translate(3, 5)"/>
+
+                                    <!-- Outline Utama Ekor Tali -->
+                                    <path d="M 218 232 C 192 242, 166 264, 150 296 C 134 328, 112 372, 66 384 C 50 388, 36 387, 26 384" fill="none" stroke="#2C1A12" stroke-width="15.5" stroke-linecap="round"/>
+
+                                    <!-- Isi Dasar Cokelat Goni -->
+                                    <path d="M 218 232 C 192 242, 166 264, 150 296 C 134 328, 112 372, 66 384 C 50 388, 36 387, 26 384" fill="none" stroke="var(--rope-main)" stroke-width="10.5" stroke-linecap="round"/>
+
+                                    <!-- Bayangan Bawah Tali (3D Depth) -->
+                                    <path d="M 216 234.5 C 191 244.5, 166 266.5, 150.5 298.5 C 135 330.5, 113 374.5, 67 386.5 C 51 390.5, 37 389.5, 27 386.5" fill="none" stroke="var(--rope-shade)" stroke-width="3.6" stroke-linecap="round" opacity="0.85"/>
+
+                                    <!-- Highlight Atas Tali (Cahaya Serat Goni) -->
+                                    <path d="M 216 229.5 C 191 239.5, 165 261.5, 149 293.5 C 133 325.5, 111 369.5, 65 381.5 C 49 385.5, 36 384.5, 27 382" fill="none" stroke="var(--rope-highlight)" stroke-width="2.4" stroke-linecap="round" opacity="0.9"/>
+
+                                    <!-- Tekstur Pilinan Serat Diagonal Mengikuti Lengkungan Tali -->
+                                    <g stroke="#2C1A12" stroke-width="2.1" stroke-linecap="round">
+                                        <path d="M 206 233 L 198 244"/>
+                                        <path d="M 194 239 L 186 250"/>
+                                        <path d="M 183 247 L 175 258"/>
+                                        <path d="M 173 256 L 165 268"/>
+                                        <path d="M 164 267 L 156 279"/>
+                                        <path d="M 156 279 L 148 291"/>
+                                        <path d="M 149 292 L 141 304"/>
+                                        <path d="M 142 305 L 134 317"/>
+                                        <path d="M 135 318 L 127 330"/>
+                                        <path d="M 128 331 L 119 342"/>
+                                        <path d="M 120 344 L 110 354"/>
+                                        <path d="M 110 356 L 100 365"/>
+                                        <path d="M 99 367 L 88 375"/>
+                                        <path d="M 86 376 L 75 382"/>
+                                        <path d="M 72 381 L 62 387"/>
+                                        <path d="M 58 383 L 49 389"/>
+                                        <path d="M 44 383 L 36 389"/>
+                                    </g>
+
+                                    <!-- Simpul Pengikat & Serabut Ujung Tambang Terurai Realistis -->
+                                    <g id="rope-end-fray">
+                                        <!-- Ikatan cincin tali sebelum ujung terurai -->
+                                        <rect x="26" y="378" width="7" height="12" rx="3" transform="rotate(14 29 384)" fill="var(--rope-shade)" stroke="#2C1A12" stroke-width="2.2"/>
+                                        <!-- Helai serabut ujung tali yang mekar alami -->
+                                        <path d="M 26 382 C 19 379, 13 377, 8 378" fill="none" stroke="#2C1A12" stroke-width="2.4" stroke-linecap="round"/>
+                                        <path d="M 25 384 C 17 383, 11 384, 5 386" fill="none" stroke="var(--rope-main)" stroke-width="2.8" stroke-linecap="round"/>
+                                        <path d="M 25 384 C 17 383, 11 384, 5 386" fill="none" stroke="#2C1A12" stroke-width="1.3" stroke-linecap="round"/>
+                                        <path d="M 26 387 C 20 389, 14 391, 9 393" fill="none" stroke="#2C1A12" stroke-width="2.3" stroke-linecap="round"/>
+                                        <path d="M 22 381 C 16 380, 12 380, 8 381" fill="none" stroke="var(--rope-highlight)" stroke-width="1.5" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+
+                                <!-- SEGMEN TALI 1: TALI TAMBANG TEGANG UTAMA (Membentang lurus dari kanan ke genggaman tangan) -->
+                                <g id="layer-rope-front" class="anim-rope-tense">
+                                    <!-- Outline Tali -->
+                                    <path d="M 215 232 L 455 226" stroke="#2C1A12" stroke-width="15.5" stroke-linecap="round"/>
+                                    <!-- Isi Dasar Cokelat Goni -->
+                                    <path d="M 215 232 L 455 226" stroke="var(--rope-main)" stroke-width="10.5" stroke-linecap="round"/>
+                                    <!-- Bayangan Bawah Tali -->
+                                    <path d="M 215 234.5 L 455 228.5" stroke="var(--rope-shade)" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+                                    <!-- Highlight Atas Tali -->
+                                    <path d="M 215 229.5 L 455 223.5" stroke="var(--rope-highlight)" stroke-width="2.3" stroke-linecap="round" opacity="0.9"/>
+                                    <!-- Garis Ulir Pilinan Tambang -->
+                                    <path d="M 228 227 L 222 236 M 242 227 L 236 236 M 256 226 L 250 235 M 270 226 L 264 235 M 284 226 L 278 235 M 298 225 L 292 234 M 312 225 L 306 234 M 326 225 L 320 234 M 340 224 L 334 233 M 354 224 L 348 233 M 368 224 L 362 233 M 382 223 L 376 232 M 396 223 L 390 232 M 410 223 L 404 232 M 424 222 L 418 231 M 438 222 L 432 231" stroke="#2C1A12" stroke-width="2.1" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- KEPALAN TANGAN KANAN (Menggenggam tali di posisi depan) -->
+                                <g id="hand-right-grip" class="anim-rope-tense">
+                                    <rect x="278" y="216" width="28" height="23" rx="9" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="2.8"/>
+                                    <!-- Jari-jari menggenggam -->
+                                    <path d="M 285 217 L 285 230 M 292 217 L 292 230 M 299 217 L 299 230" stroke="#2C1A12" stroke-width="2.2" stroke-linecap="round"/>
+                                    <!-- Ibu jari -->
+                                    <path d="M 280 231 C 286 228, 296 228, 302 232" fill="none" stroke="#2C1A12" stroke-width="2.3" stroke-linecap="round"/>
+                                </g>
+
+                                <!-- LENGAN KIRI (Depan, menekuk kuat menarik tali) -->
+                                <g id="arm-left-front">
+                                    <!-- Lengan Baju Kiri -->
+                                    <path id="shirt-sleeve-left" class="shirt-fill" d="M 150 175 C 134 182, 128 202, 130 224 C 142 228, 158 226, 168 220 C 166 204, 164 188, 150 175 Z" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bayangan Lengan Baju Kiri -->
+                                    <path class="shirt-shade-fill" d="M 131 215 C 142 219, 156 218, 166 213 L 168 220 C 157 226, 142 228, 130 224 Z"/>
+
+                                    <!-- Lengan Bawah Kiri (Kulit) -->
+                                    <path d="M 135 225 L 142 246 C 145 253, 152 256, 161 254 L 216 240 L 213 224 L 166 232 L 162 222 Z" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                    <!-- Bayangan lengan bawah -->
+                                    <path d="M 140 242 C 144 250, 151 253, 160 251 L 214 238 L 213 233 L 158 245 C 150 246, 145 244, 140 242 Z" fill="var(--skin-shade)" opacity="0.6"/>
+
+                                    <!-- Kepalan Tangan Kiri (Menggenggam tali dekat pinggang) -->
+                                    <g id="hand-left-grip">
+                                        <rect x="206" y="218" width="29" height="24" rx="9" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="2.8"/>
+                                        <!-- Jari-jari -->
+                                        <path d="M 214 219 L 214 232 M 221 219 L 221 232 M 228 219 L 228 232" stroke="#2C1A12" stroke-width="2.2" stroke-linecap="round"/>
+                                        <!-- Ibu jari -->
+                                        <path d="M 209 233 C 216 230, 225 230, 232 234" fill="none" stroke="#2C1A12" stroke-width="2.3" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+
+                                <!-- KEPALA, WAJAH, RAMBUT & IKAT KEPALA MERAH PUTIH -->
+                                <g id="head-group" class="anim-head">
+                                    <!-- Pita Ikat Kepala Berkibar di Belakang (Kiri) -->
+                                    <g id="headband-ribbons">
+                                        <!-- Pita Bawah -->
+                                        <g class="anim-ribbon-2">
+                                            <path d="M 125 120 C 110 135, 96 155, 74 164 L 84 178 C 108 168, 120 144, 128 124 Z" fill="#FFFFFF" stroke="#2C1A12" stroke-width="2.6" stroke-linejoin="round"/>
+                                            <path d="M 125 120 C 110 135, 96 155, 74 164 L 79 171 C 102 162, 115 140, 126 122 Z" fill="#D92B2B"/>
+                                        </g>
+                                        <!-- Pita Atas -->
+                                        <g class="anim-ribbon-1">
+                                            <path d="M 124 115 C 102 124, 72 122, 48 134 L 58 149 C 80 138, 106 135, 126 121 Z" fill="#FFFFFF" stroke="#2C1A12" stroke-width="2.6" stroke-linejoin="round"/>
+                                            <path d="M 124 115 C 102 124, 72 122, 48 134 L 53 141 C 76 131, 104 129, 125 118 Z" fill="#D92B2B"/>
+                                        </g>
+                                        <!-- Simpul Ikatan -->
+                                        <circle cx="125" cy="118" r="6" fill="#D92B2B" stroke="#2C1A12" stroke-width="2.5"/>
+                                    </g>
+
+                                    <!-- Telinga Kanan (Sedikit terlihat di belakang pipi kanan) -->
+                                    <path d="M 248 122 C 258 120, 263 132, 256 142 C 252 147, 246 147, 243 144" fill="var(--skin-shade)" stroke="#2C1A12" stroke-width="2.8"/>
+
+                                    <!-- Leher -->
+                                    <path d="M 178 160 L 178 176 C 186 182, 200 182, 206 175 L 206 160 Z" fill="var(--skin-shade)" stroke="#2C1A12" stroke-width="2.8"/>
+
+                                    <!-- Bentuk Wajah / Kepala -->
+                                    <path d="M 142 112 C 142 78, 244 76, 248 118 C 251 152, 234 174, 202 175 C 168 176, 146 158, 142 132 Z" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3"/>
+                                    <!-- Bayangan Dagu & Pipi Bawah -->
+                                    <path d="M 152 152 C 166 168, 196 173, 224 166 C 214 173, 198 175, 184 174 C 168 172, 158 163, 152 152 Z" fill="var(--skin-shade)" opacity="0.65"/>
+
+                                    <!-- Telinga Kiri (Tampak jelas di samping) -->
+                                    <g id="ear-left">
+                                        <path d="M 146 128 C 132 124, 124 136, 130 148 C 135 158, 148 158, 154 150" fill="var(--skin-main)" stroke="#2C1A12" stroke-width="3" stroke-linecap="round"/>
+                                        <path d="M 144 135 C 137 134, 135 142, 140 147" fill="none" stroke="#2C1A12" stroke-width="2.2" stroke-linecap="round"/>
+                                    </g>
+
+                                    <!-- Rambut Bagian Samping & Jambang -->
+                                    <path d="M 134 126 C 136 105, 155 88, 185 88 L 246 92 C 254 102, 253 118, 247 126 C 245 112, 238 104, 228 102 L 166 108 C 158 116, 155 128, 153 136 C 148 130, 142 126, 134 126 Z" fill="var(--hair-main)" stroke="#2C1A12" stroke-width="2.8" stroke-linejoin="round"/>
+
+                                    <!-- Ikat Kepala Merah Putih Melingkari Dahi -->
+                                    <g id="headband-forehead">
+                                        <!-- Bagian Merah Atas -->
+                                        <path d="M 126 112 C 156 88, 212 78, 252 88 L 254 98 C 212 88, 156 98, 128 120 Z" fill="#D92B2B" stroke="#2C1A12" stroke-width="2.6" stroke-linejoin="round"/>
+                                        <!-- Bagian Putih Bawah -->
+                                        <path d="M 128 120 C 156 98, 212 88, 254 98 L 253 107 C 212 97, 158 107, 131 127 Z" fill="#FFFFFF" stroke="#2C1A12" stroke-width="2.6" stroke-linejoin="round"/>
+                                    </g>
+
+                                    <!-- Jambul Rambut Runcing di Atas Ikat Kepala -->
+                                    <g id="hair-top">
+                                        <path d="M 126 106 C 116 104, 114 96, 124 92 C 122 82, 128 74, 138 76 C 130 68, 136 58, 148 62 C 146 50, 156 42, 164 52 C 174 40, 192 32, 206 28 C 204 36, 202 42, 206 44 C 218 38, 230 34, 238 32 C 236 42, 234 48, 238 52 C 248 50, 260 52, 266 54 C 262 62, 258 68, 254 72 C 264 78, 268 92, 264 102 C 258 96, 252 92, 246 90 C 242 84, 236 82, 230 86 C 232 78, 228 74, 220 78 C 218 84, 212 88, 206 88 C 208 80, 204 76, 196 80 C 190 86, 182 90, 174 90 C 156 92, 140 98, 126 106 Z" fill="var(--hair-main)" stroke="#2C1A12" stroke-width="3" stroke-linejoin="round"/>
+                                        <!-- Kilau Rambut Halus -->
+                                        <path d="M 158 58 C 174 48, 190 42, 202 40" fill="none" stroke="var(--hair-highlight)" stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M 214 52 C 224 46, 234 44, 244 46" fill="none" stroke="var(--hair-highlight)" stroke-width="2.2" stroke-linecap="round"/>
+                                    </g>
+
+                                    <!-- Detail Wajah: Alis, Mata Bersemangat, Cat Pipi Merah Putih, Hidung, Senyum -->
+                                    <g id="face-expression">
+                                        <!-- Mata Kiri -->
+                                        <ellipse cx="184" cy="126" rx="8" ry="9" fill="#FFFFFF" stroke="#2C1A12" stroke-width="2.3"/>
+                                        <circle cx="187" cy="126" r="4.5" fill="#2C1A12"/>
+                                        <circle cx="188.5" cy="124.5" r="1.6" fill="#FFFFFF"/>
+
+                                        <!-- Mata Kanan -->
+                                        <ellipse cx="226" cy="122" rx="7" ry="8.5" fill="#FFFFFF" stroke="#2C1A12" stroke-width="2.3"/>
+                                        <circle cx="228.5" cy="122" r="4.2" fill="#2C1A12"/>
+                                        <circle cx="230" cy="120.5" r="1.5" fill="#FFFFFF"/>
+
+                                        <!-- Alis Tebal Berkerut (Ekspresi Semangat) -->
+                                        <path d="M 171 114 L 194 119" stroke="#2C1A12" stroke-width="4.2" stroke-linecap="round"/>
+                                        <path d="M 218 116 L 235 109" stroke="#2C1A12" stroke-width="4" stroke-linecap="round"/>
+
+                                        <!-- Cat Wajah Merah Putih di Kedua Pipi -->
+                                        <!-- Pipi Kiri -->
+                                        <g transform="translate(168, 138) rotate(-6)">
+                                            <rect x="0" y="0" width="18" height="4.5" rx="1.5" fill="#D92B2B"/>
+                                            <rect x="0" y="4.5" width="18" height="4.5" rx="1.5" fill="#FFFFFF"/>
+                                        </g>
+                                        <!-- Pipi Kanan -->
+                                        <g transform="translate(226, 134) rotate(-6)">
+                                            <rect x="0" y="0" width="15" height="4.2" rx="1.5" fill="#D92B2B"/>
+                                            <rect x="0" y="4.2" width="15" height="4.2" rx="1.5" fill="#FFFFFF"/>
+                                        </g>
+
+                                        <!-- Hidung Mungil -->
+                                        <path d="M 211 129 C 216 131, 217 136, 212 138" fill="none" stroke="#2C1A12" stroke-width="2.5" stroke-linecap="round"/>
+
+                                        <!-- Mulut Menyeringai Percaya Diri -->
+                                        <path d="M 192 148 C 202 153, 213 153, 220 150" fill="none" stroke="#2C1A12" stroke-width="2.6" stroke-linecap="round"/>
+                                        <!-- Garis sudut senyum -->
+                                        <path d="M 190 145 L 193 150" stroke="#2C1A12" stroke-width="2.2" stroke-linecap="round"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>

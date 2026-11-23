@@ -1,0 +1,105 @@
+{
+  "options": ["Organik", "Anorganik", "B3"],
+  "questions": [
+    {
+      "prompt": "Kulit pisang termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Kulit pisang adalah sisa tumbuhan yang dapat terurai."
+    },
+    {
+      "prompt": "Daun kering termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Daun kering dapat terurai menjadi bahan kompos."
+    },
+    {
+      "prompt": "Sisa nasi termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Sisa nasi adalah bahan makanan yang dapat terurai."
+    },
+    {
+      "prompt": "Kulit telur termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Kulit telur merupakan sisa bahan pangan organik."
+    },
+    {
+      "prompt": "Potongan sayur termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Sisa sayuran dapat diolah menjadi kompos."
+    },
+    {
+      "prompt": "Kulit mangga termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Kulit buah merupakan sampah organik."
+    },
+    {
+      "prompt": "Ampas teh tanpa kantong termasuk sampah apa?",
+      "answer": "Organik",
+      "explanation": "Ampas daun teh merupakan bahan organik."
+    },
+    {
+      "prompt": "Botol plastik bersih termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Botol plastik sulit terurai secara alami."
+    },
+    {
+      "prompt": "Kaleng minuman bersih termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Kaleng logam merupakan sampah anorganik yang bisa didaur ulang."
+    },
+    {
+      "prompt": "Botol kaca kosong bersih termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Kaca merupakan sampah anorganik."
+    },
+    {
+      "prompt": "Kantong plastik bekas termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Kantong plastik sulit terurai secara alami."
+    },
+    {
+      "prompt": "Sedotan plastik bekas termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Sedotan plastik merupakan sampah anorganik."
+    },
+    {
+      "prompt": "Bungkus makanan berbahan plastik termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Kemasan plastik merupakan sampah anorganik."
+    },
+    {
+      "prompt": "Sendok plastik bekas termasuk sampah apa?",
+      "answer": "Anorganik",
+      "explanation": "Sendok plastik sulit terurai secara alami."
+    },
+    {
+      "prompt": "Baterai bekas termasuk sampah apa?",
+      "answer": "B3",
+      "explanation": "Baterai mengandung bahan berbahaya dan harus ditangani terpisah."
+    },
+    {
+      "prompt": "Lampu neon bekas mengandung merkuri termasuk apa?",
+      "answer": "B3",
+      "explanation": "Merkuri berbahaya; lampu neon perlu penanganan khusus."
+    },
+    {
+      "prompt": "Obat kedaluwarsa termasuk sampah apa?",
+      "answer": "B3",
+      "explanation": "Obat kedaluwarsa tidak boleh dibuang bersama sampah biasa."
+    },
+    {
+      "prompt": "Kaleng berisi sisa cat berbahaya termasuk apa?",
+      "answer": "B3",
+      "explanation": "Sisa cat berbahaya membutuhkan penanganan khusus."
+    },
+    {
+      "prompt": "Wadah bekas pestisida termasuk sampah apa?",
+      "answer": "B3",
+      "explanation": "Sisa pestisida bersifat berbahaya."
+    },
+    {
+      "prompt": "Aki kendaraan bekas termasuk sampah apa?",
+      "answer": "B3",
+      "explanation": "Aki mengandung asam dan logam berbahaya."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "options": ["Kubus", "Balok", "Bola", "Tabung", "Kerucut", "Limas"],
+  "questions": [
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Kubus",
+      "explanation": "Kubus memiliki enam sisi persegi sama besar.",
+      "image": "cube"
+    },
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Balok",
+      "explanation": "Balok memiliki tiga pasang sisi persegi panjang.",
+      "image": "box"
+    },
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Bola",
+      "explanation": "Bola memiliki permukaan lengkung tanpa sudut.",
+      "image": "ball"
+    },
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Tabung",
+      "explanation": "Tabung memiliki dua sisi lingkaran sejajar.",
+      "image": "cylinder"
+    },
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Kerucut",
+      "explanation": "Kerucut memiliki alas lingkaran dan satu puncak.",
+      "image": "cone"
+    },
+    {
+      "prompt": "Apa nama bangun pada gambar?",
+      "answer": "Limas",
+      "explanation": "Limas memiliki alas dan sisi segitiga yang bertemu di puncak.",
+      "image": "pyramid"
+    },
+    {
+      "prompt": "Dadu permainan biasanya berbentuk apa?",
+      "answer": "Kubus",
+      "explanation": "Dadu biasa memiliki enam sisi persegi."
+    },
+    {
+      "prompt": "Kotak sepatu biasanya berbentuk apa?",
+      "answer": "Balok",
+      "explanation": "Kotak sepatu berbentuk balok."
+    },
+    {
+      "prompt": "Bola sepak menyerupai bangun apa?",
+      "answer": "Bola",
+      "explanation": "Bola sepak menyerupai bola."
+    },
+    {
+      "prompt": "Kaleng susu menyerupai bangun apa?",
+      "answer": "Tabung",
+      "explanation": "Kaleng memiliki dua bidang lingkaran dan sisi melengkung."
+    },
+    {
+      "prompt": "Topi ulang tahun runcing menyerupai apa?",
+      "answer": "Kerucut",
+      "explanation": "Topi runcing dengan alas lingkaran menyerupai kerucut."
+    },
+    {
+      "prompt": "Piramida beralas persegi menyerupai apa?",
+      "answer": "Limas",
+      "explanation": "Piramida beralas persegi merupakan limas segi empat."
+    },
+    {
+      "prompt": "Bangun apa yang memiliki 6 sisi persegi sama besar?",
+      "answer": "Kubus",
+      "explanation": "Semua sisi kubus berupa persegi sama besar."
+    },
+    {
+      "prompt": "Bangun apa yang tidak memiliki rusuk dan titik sudut?",
+      "answer": "Bola",
+      "explanation": "Bola tidak memiliki rusuk maupun titik sudut."
+    },
+    {
+      "prompt": "Bangun apa yang memiliki 2 sisi lingkaran sejajar?",
+      "answer": "Tabung",
+      "explanation": "Alas dan tutup tabung berbentuk lingkaran."
+    },
+    {
+      "prompt": "Bangun apa yang beralas lingkaran dan berpuncak satu?",
+      "answer": "Kerucut",
+      "explanation": "Kerucut mempunyai satu alas lingkaran dan satu puncak."
+    },
+    {
+      "prompt": "Lemari persegi panjang menyerupai bangun apa?",
+      "answer": "Balok",
+      "explanation": "Lemari persegi panjang menyerupai balok."
+    },
+    {
+      "prompt": "Jeruk yang bulat menyerupai bangun apa?",
+      "answer": "Bola",
+      "explanation": "Jeruk bulat menyerupai bola."
+    },
+    {
+      "prompt": "Gulungan tisu menyerupai bangun apa?",
+      "answer": "Tabung",
+      "explanation": "Gulungan tisu menyerupai tabung."
+    },
+    {
+      "prompt": "Es krim dalam wadah runcing memakai wadah berbentuk apa?",
+      "answer": "Kerucut",
+      "explanation": "Wadah es krim runcing berbentuk kerucut."
+    }
+  ]
+}
